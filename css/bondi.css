@@ -1,0 +1,218 @@
+:root {
+    --main-color: rgb(13 40	65);
+    --green-color: rgb(0 207 201);
+    --red:rgb(255	49	88	);
+    --yellow:rgb(255	194	15	);
+    --section-color:rgb(234	247	250	)
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.main-btn {
+    background-color: var(--red);
+    color: var(--yellow);
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+}
+.main-title::after {
+    content: '';
+    position: absolute;
+    background-color: var(--green-color);
+    height: 2px;
+    width: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* start nav-bar */
+.navbar  {
+    background-color: var(--main-color);
+}
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    color: var(--green-color);
+}
+.navbar .search  {
+    border-left: 3px solid var(--green-color);
+}
+.navbar .search svg {
+    color: white;
+}
+.navbar .navbar-toggler {
+    color: white;
+    font-size: 25px;
+}
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    border: 1px solid var(--green-color);
+}
+/* end nav-bar */
+/* start landing */
+.landing {
+    background-color: var(--main-color);
+    height: calc(100vh - 55px);/* test in the md an sm screen */
+}
+/* End landing */
+/* start features */
+.feat .number,
+.feat .icon {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.feat .number {
+    font-size: 12rem; 
+    color: var(--section-color);
+}
+.feat .icon {
+    color: var(--green-color); 
+}
+.feat .icon-holder { /* very important  to siplay the size of .number */
+    height: 200px;
+}
+.feat h4 {
+    color: var(--yellow);
+}
+/* End features */
+/* start our-Work */
+.our-work {
+    background-color: var(--section-color);
+}
+.our-work ul li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.our-work ul li:not(.active):hover {
+    color: var(--red);
+}
+.our-work ul li.active {
+    background-color: var(--red);
+    color: var(--yellow);
+}
+.our-work ul li.active:hover {
+    color: var(--main-color);
+}
+.our-work .row .box {
+    position: relative;
+    padding: 0.5rem;    
+    display: flex; /* it handel the before and after elements*/
+    justify-content: center;
+    align-items: center;
+}
+.our-work .row .box::before {
+    position: absolute;
+    content: '';
+    width:0;
+    height: calc(100% - 1rem);
+    background-color: rgb(0 207 201 /76%);
+    transition: 0.3s;
+}
+.our-work .row .box::after {
+    position: absolute;
+    content: attr(data-work);
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    display: none;
+}
+.our-work .row .box:hover::before {
+    width: calc(100% - 1rem);
+}
+.our-work .row .box:hover::after {
+    display: block;
+}
+/* End our-Work */
+/* start stuff */
+.description {
+    max-width: 600px;
+}
+.def {
+    max-width: 900px;
+}
+/* End stuff */
+/* Start team */
+.team {
+    background-color: var(--section-color);
+}
+.team h2 {
+    color: var(--yellow);
+}
+.team .box h3 {
+    background-color: var(--green-color);
+}
+/* End team */
+/* start projret */
+.project {
+    background-color: var(--main-color);
+}
+/* start blog */
+.Blog .box {
+    overflow: hidden;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+}
+/* End blog */
+/* Start subscribe */
+.subscribe {
+    background-color: var(--yellow);
+}
+.subscribe input {
+    border: none;
+    border-bottom: 1px solid white;
+    width: 100%;
+}
+.subscribe input:focus {
+    outline: none;
+}
+.subscribe input::placeholder{
+    color: white;
+}
+.subscribe .btn {
+    background-color: var(--main-color);
+} 
+.subscribe .btn:hover {
+    color: white;
+} 
+/* End subscribe */
+/* Start footer */
+footer {
+    background-color: var(--main-color);
+}
+footer .one {
+    color: var(--green-color);
+}
+footer .two {
+    color: var(--yellow);
+}
+footer .incon-holder-2 .facebook {
+    background-color: #1877f2;
+}
+footer .incon-holder-2 .youtube {
+    background-color: #ff0000;
+}
+footer .incon-holder-2 .twitter {
+    background-color: #1da1f2;
+}
+footer .incon-holder-2 .linkdein {
+    background-color: #0077b5;
+}
+footer  ul li a {
+    color: rgba(255,255,255,.5);
+    font-weight: bold;
+    text-decoration: none;
+}
+footer  ul li a:hover {
+    color: var(--yellow);
+    padding-left: 1px;
+}
+/* End footer */
